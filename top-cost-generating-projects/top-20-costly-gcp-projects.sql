@@ -3,7 +3,7 @@ WITH january_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202401"
     GROUP BY
@@ -18,7 +18,7 @@ february_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202402"
     GROUP BY
@@ -33,7 +33,7 @@ march_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202403"
     GROUP BY
@@ -48,7 +48,7 @@ april_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202404"
     GROUP BY
@@ -63,7 +63,7 @@ may_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202405"
     GROUP BY
@@ -78,7 +78,7 @@ june_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202406"
     GROUP BY
@@ -93,7 +93,7 @@ july_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202407"
     GROUP BY
@@ -108,7 +108,7 @@ august_2024_costs AS (
         project.name AS project_name,
         ROUND(SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)),2) AS net_monthly_cost,
     FROM
-        `sp-billing-export.billing_export_dataset.gcp_billing_export_resource_v1_019B2C_BB4714_3D8191`
+        `DATASET_PROJECT.DATASET_NAME.gcp_billing_export_resource_v1_BILLING_ACCOUNT_ID`
     WHERE
         invoice.month = "202408"
     GROUP BY
